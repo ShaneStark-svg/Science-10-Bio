@@ -1,0 +1,53 @@
+/* === CSS Reset === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* === Variables === */
+:root {
+  --color-primary:      #0f172a;
+  --color-accent:       #0ea5e9;
+  --color-highlight:    #e0f2fe;
+  --color-bg:           #f8fafc;
+  --color-surface:      #ffffff;
+  --color-text:         #0f172a;
+  --color-text-muted:   #64748b;
+  --color-border:       #e2e8f0;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body:    'Source Sans 3', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  --radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:        #0a0f1e;
+    --color-surface:   #0f172a;
+    --color-text:      #f1f5f9;
+    --color-text-muted:#94a3b8;
+    --color-border:    #1e293b;
+    --color-highlight: #0c2340;
+  }
+}
+
+/* === Typography === */
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+p { max-width: 65ch; }
